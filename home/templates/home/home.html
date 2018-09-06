@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Home!!</h1>
+<div class="container" >
+    <h1>{{user.username }}</h1>
+    <h1>{{user.userprofile.bio}}</h1>
+    <h1>{{user.userprofile.company}}</h1>
+    <h1>{{user.userprofile.school}}</h1>
+    <h1>{{user.userprofile.college}}</h1>
+    <!-- <img src="{{ user.userprofile.image }}" width="200px"> -->
+{% endblock %}

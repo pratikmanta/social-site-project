@@ -1,0 +1,32 @@
+{% extends 'base.html '%}
+
+{% block content %}
+
+{% if error %}
+
+{{ error }}
+<br>
+<br>
+{% endif %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <h1>Profile Details</h1>
+            <hr>
+            <form method="POST" class="container" name="{% url 'add_profile' %}">
+                {% csrf_token %}
+                <h5>BIO:{{form.bio}}</h5><br>
+                <h5>COMPANY :{{form.company}}</h5><br>
+                <h5>SCHOOL :{{form.school}}</h5><br>
+                <h5>COLLEGE :{{form.college}}</h5><br>
+                <h5>IMAGE :{{form.image}}</h5><br>
+                <div class="text-center mt-2">
+                    <button type="submit" class=" btn btn-block btn-secondary">ADD DETAILS</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
